@@ -49,4 +49,4 @@ jobs:
         script: |
           cd ~/ecommerce
           docker pull ${{ secrets.DOCKER_USERNAME }}/ecommerce-backend:latest
-          docker-compose up -d
+          Docker-compose up -d
