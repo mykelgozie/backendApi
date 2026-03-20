@@ -1,6 +1,6 @@
 services:
   app:
-    build: .
+    image: ${DOCKER_USERNAME}/ecommerce-backend:latest
     ports:
       - "5000:5000"
     env_file: .env
