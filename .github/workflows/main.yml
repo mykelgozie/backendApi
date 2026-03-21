@@ -53,6 +53,10 @@ jobs:
          echo "POSTGRES_USER=${{ secrets.POSTGRES_USER }}" >> .env
          echo "POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }}" >> .env
          echo "POSTGRES_DB=${{ secrets.POSTGRES_DB }}" >> .env
+         echo "DB_USER=${{ secrets.POSTGRES_USER }}" >> .env
+         echo "DB_HOST=${{ secrets.POSTGRES_USER }}" >> .env
+         echo "DB_NAME=${{ secrets.POSTGRES_DB }}" >> .env
+         echo "DB_PASS=${{ secrets.POSTGRES_PASSWORD }}" >> .env
          docker pull ${{ secrets.DOCKER_USERNAME }}/ecommerce-backend:latest
          docker compose -f Docker-compose.yml up -d
           
